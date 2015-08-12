@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html代码转化为dom代码的工具</title>
+	<link rel="stylesheet" type="text/css" href="htmltodomstyle.css">
+</head>
+<body>
+	<h1>DOM生成器</h1>
+	
+	
+	<div class="m-generate">
+		<form>
+			<h2>source</h2>
+			<label>enter an html document fragment</label>
+			<textarea id="source" cols="30" rows="15"></textarea>
+			<input id="generate" type="button" value="&#8595; generate &#8595;">
+			<h2>dom code</h2>
+			<label>you can fetch dom code here</label>
+			<textarea id="result" cols="30" rows="15" ></textarea>
+		</form>
+	</div>
+	<script type="text/javascript" src="Library.js"></script>
+	<script type="text/javascript" src="generatedom.js"></script>
+	<script type="text/javascript">
+		var lib = library;
+		lib.addLoadEvent(function(){
+			lib.addEvent(lib.$('generate'),'click',function(event){
+				var source = lib.$('source').value;
+				lib.$('result').value = generateDOM(source);				
+			});
+		});
+
+	</script>
+</body>
+</html>

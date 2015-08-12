@@ -1,0 +1,33 @@
+html ,body, div, p,h1,h2 {
+	margin: 0;
+	padding: 0;
+}
+
+label ,input,textarea {
+	display: block;
+}
+
+.m-generate {
+	width: 800px;
+	margin: 0 auto;
+	padding: 30px;
+	border: 1px dashed black;
+	border-radius: 5px;
+
+
+}
+
+.m-generate input[type="button"],.m-generate h1,.m-generate h2,.m-generate label,.m-generate textarea {
+	width: 100%;
+	margin: 10px;
+}
+
+.m-generate h2 {
+	border: 2px dashed black;
+	border-radius: 5px;
+}
+
+h1 {
+	background-color: rgba(200,10,10,0.6);
+	margin-bottom: 20px;
+}
